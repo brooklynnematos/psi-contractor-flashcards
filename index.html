@@ -18,450 +18,450 @@
     color: #fff;
   }
 
-  h1 {
-    font-size: 1.5rem;
-    margin-bottom: 6px;
-    color: #e2b96f;
-    text-align: center;
-  }
+  h1 { font-size: 1.5rem; margin-bottom: 4px; color: #e2b96f; text-align: center; }
+  .subtitle { font-size: 0.85rem; color: #aaa; margin-bottom: 16px; text-align: center; }
 
-  .subtitle {
-    font-size: 0.85rem;
-    color: #aaa;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .controls {
+  .mode-toggle {
     display: flex;
-    gap: 10px;
-    margin-bottom: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
+    background: #2d2d4e;
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 16px;
+    gap: 4px;
   }
-
-  button {
-    padding: 9px 20px;
+  .mode-btn {
+    padding: 8px 22px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 600;
+    background: transparent;
+    color: #888;
     transition: all 0.2s;
   }
-
-  .btn-shuffle { background: #e2b96f; color: #1a1a2e; }
-  .btn-shuffle:hover { background: #f0ca88; }
-
-  .btn-prev, .btn-next { background: #2d2d4e; color: #fff; border: 1px solid #444; }
-  .btn-prev:hover, .btn-next:hover { background: #3d3d6e; }
-
-  .btn-restart { background: #c0392b; color: #fff; }
-  .btn-restart:hover { background: #e74c3c; }
-
-  .btn-filter {
-    background: #2d2d4e;
-    color: #aaa;
-    border: 1px solid #444;
-    font-size: 0.78rem;
-    padding: 6px 14px;
-  }
-  .btn-filter.active { background: #4a3f7a; color: #e2b96f; border-color: #e2b96f; }
-
-  .progress-bar-wrap {
-    width: 100%;
-    max-width: 600px;
-    background: #2d2d4e;
-    border-radius: 20px;
-    height: 6px;
-    margin-bottom: 10px;
-  }
-  .progress-bar {
-    height: 6px;
-    background: #e2b96f;
-    border-radius: 20px;
-    transition: width 0.3s;
-  }
-
-  .counter {
-    font-size: 0.85rem;
-    color: #aaa;
-    margin-bottom: 18px;
-  }
-
-  /* CARD */
-  .card-scene {
-    width: 100%;
-    max-width: 600px;
-    height: 320px;
-    perspective: 1000px;
-    cursor: pointer;
-    margin-bottom: 16px;
-  }
-
-  .card {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
-  }
-
-  .card.flipped { transform: rotateY(180deg); }
-
-  .card-face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    text-align: center;
-  }
-
-  .card-front {
-    background: linear-gradient(135deg, #2d2d4e, #3d3d6e);
-    border: 1px solid #4a4a7e;
-  }
-
-  .card-back {
-    background: linear-gradient(135deg, #1e3a2f, #2a5240);
-    border: 1px solid #3a6e5a;
-    transform: rotateY(180deg);
-  }
-
-  .card-tag {
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 20px;
-    margin-bottom: 16px;
-  }
-
-  .card-front .card-tag { background: #4a3f7a; color: #e2b96f; }
-  .card-back .card-tag { background: #1a4a35; color: #6fcf97; }
-
-  .q-number {
-    font-size: 0.75rem;
-    color: #888;
-    margin-bottom: 10px;
-  }
-
-  .card-question {
-    font-size: 1.1rem;
-    font-weight: 600;
-    line-height: 1.5;
-    color: #fff;
-    margin-bottom: 14px;
-  }
-
-  .card-chapter {
-    font-size: 0.78rem;
-    color: #e2b96f;
-    background: rgba(226, 185, 111, 0.1);
-    padding: 5px 14px;
-    border-radius: 20px;
-  }
-
-  .card-answer {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #d4f5e4;
-    font-weight: 500;
-  }
-
-  .tap-hint {
-    font-size: 0.75rem;
-    color: #666;
-    margin-bottom: 20px;
-  }
+  .mode-btn.active { background: #e2b96f; color: #1a1a2e; }
 
   .section-filters {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 7px;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     max-width: 640px;
   }
-
-  .known-btn {
-    padding: 9px 20px;
-    background: #1e3a2f;
-    color: #6fcf97;
-    border: 1px solid #3a6e5a;
-    border-radius: 8px;
-    font-weight: 600;
+  .btn-filter {
+    padding: 5px 13px;
+    border-radius: 20px;
+    border: 1px solid #444;
+    background: #2d2d4e;
+    color: #aaa;
+    font-size: 0.78rem;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-weight: 600;
     transition: all 0.2s;
   }
-  .known-btn:hover { background: #2a5240; }
+  .btn-filter.active { background: #4a3f7a; color: #e2b96f; border-color: #e2b96f; }
 
-  .known-indicator {
-    font-size: 0.78rem;
-    color: #6fcf97;
-    margin-top: 8px;
-    height: 18px;
+  .controls {
+    display: flex;
+    gap: 9px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+  button.ctrl {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .btn-shuffle { background: #e2b96f; color: #1a1a2e; }
+  .btn-shuffle:hover { background: #f0ca88; }
+  .btn-prev, .btn-next { background: #2d2d4e; color: #fff; border: 1px solid #444; }
+  .btn-prev:hover, .btn-next:hover { background: #3d3d6e; }
+  .btn-restart { background: #c0392b; color: #fff; }
+  .btn-restart:hover { background: #e74c3c; }
+
+  .progress-bar-wrap { width: 100%; max-width: 600px; background: #2d2d4e; border-radius: 20px; height: 6px; margin-bottom: 8px; }
+  .progress-bar { height: 6px; background: #e2b96f; border-radius: 20px; transition: width 0.3s; }
+  .counter { font-size: 0.85rem; color: #aaa; margin-bottom: 16px; text-align: center; }
+
+  /* FLASHCARD */
+  #flashcardMode { width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; }
+
+  .card-scene {
+    width: 100%; height: 300px; perspective: 1000px; cursor: pointer; margin-bottom: 12px;
+  }
+  .card {
+    width: 100%; height: 100%; position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+  }
+  .card.flipped { transform: rotateY(180deg); }
+  .card-face {
+    position: absolute; width: 100%; height: 100%;
+    backface-visibility: hidden; border-radius: 16px;
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; padding: 28px; text-align: center;
+  }
+  .card-front { background: linear-gradient(135deg, #2d2d4e, #3d3d6e); border: 1px solid #4a4a7e; }
+  .card-back { background: linear-gradient(135deg, #1e3a2f, #2a5240); border: 1px solid #3a6e5a; transform: rotateY(180deg); }
+  .card-tag {
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 20px; margin-bottom: 14px;
+  }
+  .card-front .card-tag { background: #4a3f7a; color: #e2b96f; }
+  .card-back .card-tag { background: #1a4a35; color: #6fcf97; }
+  .q-number { font-size: 0.72rem; color: #888; margin-bottom: 8px; }
+  .card-question { font-size: 1.05rem; font-weight: 600; line-height: 1.5; color: #fff; margin-bottom: 12px; }
+  .card-chapter { font-size: 0.75rem; color: #e2b96f; background: rgba(226,185,111,0.1); padding: 4px 12px; border-radius: 20px; }
+  .card-answer { font-size: 0.97rem; line-height: 1.6; color: #d4f5e4; font-weight: 500; }
+  .tap-hint { font-size: 0.74rem; color: #555; margin-bottom: 14px; }
+  .known-btn {
+    padding: 8px 18px; background: #1e3a2f; color: #6fcf97;
+    border: 1px solid #3a6e5a; border-radius: 8px; font-weight: 600;
+    cursor: pointer; font-size: 0.88rem; transition: all 0.2s;
+  }
+  .known-btn:hover { background: #2a5240; }
+  .known-indicator { font-size: 0.75rem; color: #6fcf97; margin-top: 7px; height: 16px; text-align: center; }
+
+  /* QUIZ MODE */
+  #quizMode { width: 100%; max-width: 640px; display: none; flex-direction: column; align-items: center; }
+
+  .quiz-card {
+    width: 100%;
+    background: linear-gradient(135deg, #2d2d4e, #3d3d6e);
+    border: 1px solid #4a4a7e;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 16px;
+  }
+  .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  .quiz-q-num { font-size: 0.75rem; color: #888; }
+  .quiz-chapter { font-size: 0.72rem; color: #e2b96f; background: rgba(226,185,111,0.1); padding: 3px 10px; border-radius: 20px; max-width: 65%; text-align: right; }
+  .quiz-question { font-size: 1.08rem; font-weight: 600; line-height: 1.55; color: #fff; margin-bottom: 22px; }
+  .quiz-options { display: flex; flex-direction: column; gap: 10px; }
+  .quiz-option {
+    padding: 13px 18px;
+    background: #1e1e3a;
+    border: 2px solid #3a3a5e;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.93rem;
+    color: #ccc;
+    text-align: left;
+    transition: all 0.18s;
+    line-height: 1.4;
+    width: 100%;
+  }
+  .quiz-option:hover:not(.disabled) { border-color: #e2b96f; color: #fff; background: #26263f; }
+  .quiz-option.correct { border-color: #6fcf97 !important; background: #1a3d2a !important; color: #6fcf97 !important; font-weight: 600; }
+  .quiz-option.wrong { border-color: #e74c3c !important; background: #3d1a1a !important; color: #e74c3c !important; }
+  .quiz-option.revealed { border-color: #6fcf97 !important; background: #1a3d2a !important; color: #6fcf97 !important; }
+  .quiz-option.disabled { cursor: default; }
+  .quiz-letter {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: #3a3a5e; color: #aaa; font-size: 0.75rem; font-weight: 700;
+    margin-right: 10px; flex-shrink: 0; transition: all 0.18s;
+  }
+  .quiz-option.correct .quiz-letter { background: #6fcf97; color: #1a1a2e; }
+  .quiz-option.wrong .quiz-letter { background: #e74c3c; color: #fff; }
+  .quiz-option.revealed .quiz-letter { background: #6fcf97; color: #1a1a2e; }
+  .option-inner { display: flex; align-items: flex-start; }
+
+  .quiz-feedback {
+    margin-top: 14px; padding: 12px 16px; border-radius: 10px;
+    font-size: 0.9rem; line-height: 1.5; display: none;
+  }
+  .quiz-feedback.correct-fb { background: #1a3d2a; border: 1px solid #6fcf97; color: #6fcf97; }
+  .quiz-feedback.wrong-fb { background: #3d1a1a; border: 1px solid #e74c3c; color: #e74c3c; }
+
+  .quiz-next-btn {
+    width: 100%; padding: 13px; background: #e2b96f; color: #1a1a2e;
+    border: none; border-radius: 10px; font-size: 1rem; font-weight: 700;
+    cursor: pointer; margin-top: 4px; display: none; transition: all 0.2s;
+  }
+  .quiz-next-btn:hover { background: #f0ca88; }
+
+  .score-bar {
+    display: flex; gap: 14px; margin-bottom: 14px;
+    font-size: 0.85rem; font-weight: 600;
+  }
+  .score-correct { color: #6fcf97; }
+  .score-wrong { color: #e74c3c; }
+  .score-pct { color: #e2b96f; }
+
+  /* RESULTS */
+  .results-screen {
+    width: 100%; max-width: 600px;
+    background: linear-gradient(135deg, #2d2d4e, #3d3d6e);
+    border: 1px solid #4a4a7e; border-radius: 16px;
+    padding: 36px; text-align: center; display: none;
+  }
+  .results-screen h2 { font-size: 1.5rem; color: #e2b96f; margin-bottom: 8px; }
+  .big-score { font-size: 3rem; font-weight: 800; margin: 16px 0; }
+  .pass { color: #6fcf97; }
+  .fail { color: #e74c3c; }
+  .results-screen p { color: #aaa; font-size: 0.9rem; margin-bottom: 6px; }
+  .results-screen .pass-msg { font-size: 1rem; font-weight: 600; margin: 12px 0; }
+  .results-btns { display: flex; gap: 10px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+  .results-btns button { padding: 10px 22px; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 0.9rem; }
+  .btn-retry-wrong { background: #c0392b; color: #fff; }
+  .btn-retry-wrong:hover { background: #e74c3c; }
+  .btn-new-quiz { background: #e2b96f; color: #1a1a2e; }
+  .btn-new-quiz:hover { background: #f0ca88; }
 </style>
 </head>
 <body>
 
 <h1>PSI Virginia Contractor Exam</h1>
-<p class="subtitle">Class A & B License — 200 Practice Flashcards</p>
+<p class="subtitle">Class A &amp; B License — 200 Practice Questions</p>
 
-<div class="section-filters" id="sectionFilters">
+<div class="mode-toggle">
+  <button class="mode-btn active" id="modeFlashcard" onclick="setMode('flashcard', this)">🃏 Flashcards</button>
+  <button class="mode-btn" id="modeQuiz" onclick="setMode('quiz', this)">📝 Quiz Mode</button>
+</div>
+
+<div class="section-filters">
   <button class="btn-filter active" onclick="filterSection('all', this)">All (200)</button>
   <button class="btn-filter" onclick="filterSection('Business', this)">Business Law</button>
   <button class="btn-filter" onclick="filterSection('Project', this)">Project Mgmt</button>
   <button class="btn-filter" onclick="filterSection('Financial', this)">Financial</button>
-  <button class="btn-filter" onclick="filterSection('Safety', this)">Safety & Labor</button>
+  <button class="btn-filter" onclick="filterSection('Safety', this)">Safety &amp; Labor</button>
   <button class="btn-filter" onclick="filterSection('Virginia', this)">VA Code</button>
   <button class="btn-filter" onclick="filterSection('Occupancy', this)">Occupancy</button>
   <button class="btn-filter" onclick="filterSection('Egress', this)">Egress</button>
   <button class="btn-filter" onclick="filterSection('Missed', this)">Missed ⭐</button>
 </div>
 
-<div class="controls">
-  <button class="btn-shuffle" onclick="shuffleDeck()">🔀 Shuffle</button>
-  <button class="btn-prev" onclick="prevCard()">◀ Prev</button>
-  <button class="btn-next" onclick="nextCard()">Next ▶</button>
-  <button class="btn-restart" onclick="restartDeck()">↺ Restart</button>
+<div class="controls" id="mainControls">
+  <button class="ctrl btn-shuffle" onclick="shuffleDeck()">🔀 Shuffle</button>
+  <button class="ctrl btn-prev" onclick="prevCard()">◀ Prev</button>
+  <button class="ctrl btn-next" onclick="nextCard()">Next ▶</button>
+  <button class="ctrl btn-restart" onclick="restartDeck()">↺ Restart</button>
 </div>
 
 <div class="progress-bar-wrap"><div class="progress-bar" id="progressBar"></div></div>
 <div class="counter" id="counter">Card 1 of 200</div>
 
-<div class="card-scene" onclick="flipCard()">
-  <div class="card" id="card">
-    <div class="card-face card-front">
-      <div class="card-tag">Question</div>
-      <div class="q-number" id="qNumber">Q1</div>
-      <div class="card-question" id="cardQuestion">Loading...</div>
-      <div class="card-chapter" id="cardChapter"></div>
+<div class="score-bar" id="scoreBar" style="display:none;">
+  <span class="score-correct">✓ <span id="scoreCorrect">0</span> correct</span>
+  <span class="score-wrong">✗ <span id="scoreWrong">0</span> wrong</span>
+  <span class="score-pct"><span id="scorePct">—</span>%</span>
+</div>
+
+<!-- FLASHCARD MODE -->
+<div id="flashcardMode">
+  <div class="card-scene" onclick="flipCard()">
+    <div class="card" id="card">
+      <div class="card-face card-front">
+        <div class="card-tag">Question</div>
+        <div class="q-number" id="qNumber">Q1</div>
+        <div class="card-question" id="cardQuestion">Loading...</div>
+        <div class="card-chapter" id="cardChapter"></div>
+      </div>
+      <div class="card-face card-back">
+        <div class="card-tag">Answer</div>
+        <div class="card-answer" id="cardAnswer"></div>
+      </div>
     </div>
-    <div class="card-face card-back">
-      <div class="card-tag">Answer</div>
-      <div class="card-answer" id="cardAnswer"></div>
+  </div>
+  <p class="tap-hint">Click card to flip &bull; Arrow keys to navigate &bull; Space to flip</p>
+  <button class="known-btn" onclick="markMissed()">⭐ Mark as Missed</button>
+  <div class="known-indicator" id="knownIndicator"></div>
+</div>
+
+<!-- QUIZ MODE -->
+<div id="quizMode">
+  <div class="quiz-card">
+    <div class="quiz-header">
+      <span class="quiz-q-num" id="quizQNum">Q1</span>
+      <span class="quiz-chapter" id="quizChapter"></span>
     </div>
+    <div class="quiz-question" id="quizQuestion">Loading...</div>
+    <div class="quiz-options" id="quizOptions"></div>
+    <div class="quiz-feedback" id="quizFeedback"></div>
+  </div>
+  <button class="quiz-next-btn" id="quizNextBtn" onclick="quizNext()">Next Question →</button>
+</div>
+
+<!-- RESULTS -->
+<div class="results-screen" id="resultsScreen">
+  <h2>Quiz Complete!</h2>
+  <div class="big-score" id="resultsPct"></div>
+  <p id="resultsDetail"></p>
+  <p class="pass-msg" id="resultsMsg"></p>
+  <div class="results-btns">
+    <button class="btn-retry-wrong" onclick="retryWrong()">🔁 Retry Wrong Answers</button>
+    <button class="btn-new-quiz" onclick="newQuiz()">✨ New Quiz</button>
   </div>
 </div>
 
-<p class="tap-hint">Click card to flip • Use arrows to navigate</p>
-
-<button class="known-btn" onclick="markMissed()">⭐ Mark as Missed</button>
-<div class="known-indicator" id="knownIndicator"></div>
-
 <script>
 const allCards = [
-  // SECTION 1: Business Management & Law
   { q: "What is the primary purpose of a contractor's license?", a: "To protect the public by ensuring contractors meet minimum standards of competency and financial responsibility.", ch: "NASCLA Ch. 1 — Licensing", section: "Business" },
-  { q: "Which business structure provides the most personal liability protection for its owners?", a: "A Corporation (or LLC), because owners are generally not personally liable for business debts.", ch: "NASCLA Ch. 2 — Business Organizations", section: "Business" },
+  { q: "Which business structure provides the most personal liability protection for its owners?", a: "A Corporation or LLC — owners are generally not personally liable for business debts.", ch: "NASCLA Ch. 2 — Business Organizations", section: "Business" },
   { q: "What is a sole proprietorship?", a: "A business owned and operated by one person, where the owner has unlimited personal liability.", ch: "NASCLA Ch. 2 — Business Organizations", section: "Business" },
   { q: "In a general partnership, how is liability shared among partners?", a: "Each partner is jointly and severally liable for all debts and obligations of the partnership.", ch: "NASCLA Ch. 2 — Business Organizations", section: "Business" },
   { q: "What is the main advantage of an LLC over a sole proprietorship?", a: "An LLC limits the personal liability of its members while offering flexible management and tax treatment.", ch: "NASCLA Ch. 2 — Business Organizations", section: "Business" },
-  { q: "What is 'double taxation' in the context of business structures?", a: "When a corporation pays taxes on its profits and shareholders also pay taxes on dividends received — occurs in a C-Corporation.", ch: "NASCLA Ch. 2 — Business Organizations", section: "Business" },
-  { q: "What does an S-Corporation allow that a C-Corporation does not?", a: "Pass-through taxation, where profits and losses flow directly to shareholders' personal tax returns, avoiding double taxation.", ch: "NASCLA Ch. 2 — Business Organizations", section: "Business" },
+  { q: "What is 'double taxation' in the context of business structures?", a: "When a corporation pays taxes on profits AND shareholders also pay taxes on dividends received — occurs in a C-Corporation.", ch: "NASCLA Ch. 2 — Business Organizations", section: "Business" },
+  { q: "What does an S-Corporation allow that a C-Corporation does not?", a: "Pass-through taxation — profits and losses flow directly to shareholders' personal tax returns, avoiding double taxation.", ch: "NASCLA Ch. 2 — Business Organizations", section: "Business" },
   { q: "What is 'unlimited liability' in a business context?", a: "The owner's personal assets can be used to satisfy business debts and legal judgments.", ch: "NASCLA Ch. 2 — Business Organizations", section: "Business" },
   { q: "What is a joint venture?", a: "A temporary business arrangement between two or more parties to complete a specific project, sharing profits, losses, and control.", ch: "NASCLA Ch. 2 — Business Organizations", section: "Business" },
   { q: "Which type of contract is formed when parties exchange promises, each serving as consideration for the other?", a: "A bilateral contract.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
-  { q: "What are the four essential elements required for a valid contract?", a: "Offer, acceptance, consideration, and legal capacity (competent parties and lawful purpose).", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
-  { q: "What is 'consideration' in a contract?", a: "Something of value exchanged between the parties — it can be money, services, or a promise to act or refrain from acting.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
-  { q: "What is a 'lump sum' or 'fixed price' contract?", a: "A contract where the contractor agrees to complete the work for a single fixed price regardless of actual costs.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
-  { q: "What is a cost-plus contract?", a: "A contract where the owner pays the contractor's actual costs plus a fee (either fixed or percentage) for overhead and profit.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
-  { q: "What is a unit price contract?", a: "A contract where the price is set per unit of work (e.g., per cubic yard of concrete), and the total cost depends on quantities.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
+  { q: "What are the four essential elements required for a valid contract?", a: "Offer, acceptance, consideration, and legal capacity.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
+  { q: "What is 'consideration' in a contract?", a: "Something of value exchanged between parties — money, services, or a promise to act or refrain from acting.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
+  { q: "What is a 'lump sum' or 'fixed price' contract?", a: "A contract where the contractor agrees to complete work for a single fixed price regardless of actual costs.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
+  { q: "What is a cost-plus contract?", a: "The owner pays the contractor's actual costs plus a fee (fixed or percentage) for overhead and profit.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
+  { q: "What is a unit price contract?", a: "Price is set per unit of work (e.g., per cubic yard of concrete), and the total depends on actual quantities installed.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
   { q: "What is a 'time and materials' contract?", a: "The owner pays for actual labor hours and materials used, plus a markup for overhead and profit.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
   { q: "What does 'breach of contract' mean?", a: "One party fails to fulfill their contractual obligations without a legally valid excuse.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
-  { q: "What is a 'liquidated damages' clause?", a: "A contract provision that specifies a predetermined dollar amount the contractor will pay for each day the project is delayed beyond the completion date.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
-  { q: "What is the purpose of a 'notice to proceed'?", a: "It is the owner's written authorization for the contractor to begin work on a project.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
+  { q: "What is a 'liquidated damages' clause?", a: "A contract provision specifying a predetermined dollar amount the contractor pays for each day of delay past the completion date.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
+  { q: "What is the purpose of a 'notice to proceed'?", a: "The owner's written authorization for the contractor to begin work on a project.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
   { q: "What is a 'change order'?", a: "A written document that modifies the original contract's scope of work, price, or schedule after the contract is executed.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
   { q: "What is a 'subcontract'?", a: "A contract between the general contractor and a specialty contractor to perform a portion of the work.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
-  { q: "What is the 'parol evidence rule'?", a: "Once a written contract is complete, prior oral or written agreements that contradict the written contract generally cannot be used to alter its terms.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
+  { q: "What is the 'parol evidence rule'?", a: "Once a written contract is complete, prior oral or written agreements that contradict it generally cannot be used to alter its terms.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
   { q: "What is an 'indemnification clause' in a contract?", a: "A provision where one party agrees to hold the other harmless from losses, damages, or claims arising from the project.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
-  { q: "What is arbitration?", a: "A method of alternative dispute resolution where a neutral third party hears both sides and makes a binding or non-binding decision.", ch: "NASCLA Ch. 3 / Ch. 13 — Dispute Resolution", section: "Business" },
+  { q: "What is arbitration?", a: "A dispute resolution method where a neutral third party hears both sides and makes a binding or non-binding decision.", ch: "NASCLA Ch. 13 — Dispute Resolution", section: "Business" },
   { q: "What is mediation?", a: "A non-binding dispute resolution process where a neutral mediator helps the parties reach a voluntary settlement.", ch: "NASCLA Ch. 13 — Dispute Resolution", section: "Business" },
-  { q: "What is a mechanic's lien?", a: "A legal claim against a property filed by a contractor, subcontractor, or supplier who has not been paid for work or materials provided.", ch: "NASCLA Ch. 4 — Liens", section: "Business" },
-  { q: "Who can file a mechanic's lien?", a: "General contractors, subcontractors, material suppliers, and laborers who have provided unpaid work or materials on a project.", ch: "NASCLA Ch. 4 — Liens", section: "Business" },
-  { q: "What is a 'preliminary notice' (or notice of right to lien)?", a: "A written notice served on the owner by a subcontractor or supplier informing them of their right to file a lien if not paid.", ch: "NASCLA Ch. 4 — Liens", section: "Business" },
-  { q: "What is the purpose of a lien waiver?", a: "It is a document signed by a contractor or supplier releasing their lien rights upon receipt of payment.", ch: "NASCLA Ch. 4 — Liens", section: "Business" },
-  { q: "What is a 'bond' in construction?", a: "A three-party agreement where a surety company guarantees to the owner that the contractor will fulfill their contractual obligations.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
-  { q: "What is a bid bond?", a: "A bond guaranteeing that if the contractor wins the bid, they will enter into the contract and provide the required performance and payment bonds.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
+  { q: "What is a mechanic's lien?", a: "A legal claim against a property filed by a contractor, subcontractor, or supplier who has not been paid for work or materials.", ch: "NASCLA Ch. 4 — Liens", section: "Business" },
+  { q: "Who can file a mechanic's lien?", a: "General contractors, subcontractors, material suppliers, and laborers who provided unpaid work or materials on a project.", ch: "NASCLA Ch. 4 — Liens", section: "Business" },
+  { q: "What is a 'preliminary notice' (notice of right to lien)?", a: "A written notice served on the owner by a subcontractor or supplier informing them of their right to file a lien if not paid.", ch: "NASCLA Ch. 4 — Liens", section: "Business" },
+  { q: "What is the purpose of a lien waiver?", a: "A document signed by a contractor or supplier releasing their lien rights upon receipt of payment.", ch: "NASCLA Ch. 4 — Liens", section: "Business" },
+  { q: "What is a 'bond' in construction?", a: "A three-party agreement where a surety guarantees to the owner that the contractor will fulfill contractual obligations.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
+  { q: "What is a bid bond?", a: "A bond guaranteeing that if the contractor wins the bid, they will enter the contract and provide required performance and payment bonds.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
   { q: "What is a performance bond?", a: "A bond guaranteeing that the contractor will complete the project according to the contract terms.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
   { q: "What is a payment bond?", a: "A bond guaranteeing that the contractor will pay all subcontractors, laborers, and material suppliers.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
-  { q: "What is general liability insurance?", a: "Insurance that protects the contractor against claims of bodily injury and property damage caused to third parties during construction operations.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
-  { q: "What does 'occurrence' mean in an insurance policy?", a: "A specific event or accident that triggers coverage, with no limit on how many claims can be made as long as they arise from a covered occurrence.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
-  { q: "What is workers' compensation insurance?", a: "Insurance that provides medical benefits and wage replacement to employees injured on the job, regardless of fault.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
+  { q: "What is general liability insurance?", a: "Insurance protecting the contractor against claims of bodily injury and property damage caused to third parties during construction.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
+  { q: "What is workers' compensation insurance?", a: "Insurance providing medical benefits and wage replacement to employees injured on the job, regardless of fault.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
   { q: "What is an 'additional insured'?", a: "A person or organization added to a contractor's insurance policy who receives coverage protection under that policy.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
-  { q: "What is builder's risk insurance?", a: "Insurance that covers a building or structure under construction against damage from fire, weather, vandalism, and other risks.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
+  { q: "What is builder's risk insurance?", a: "Insurance covering a building under construction against fire, weather, vandalism, and other risks.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
   { q: "What is the purpose of an umbrella or excess liability policy?", a: "To provide additional coverage above the limits of the primary liability policies.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
-  { q: "What is a 'certificate of insurance'?", a: "A document issued by an insurer that provides proof that a contractor has insurance coverage and shows the policy limits and effective dates.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
-
-  // SECTION 2: Project Management
-  { q: "What is the critical path in a project schedule?", a: "The longest sequence of dependent tasks that determines the minimum project duration; any delay on the critical path delays the entire project.", ch: "NASCLA Ch. 7 — Project Scheduling", section: "Project" },
+  { q: "What is a 'certificate of insurance'?", a: "A document issued by an insurer proving a contractor has coverage, showing policy limits and effective dates.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Business" },
+  { q: "What is 'substantial performance' in contract law?", a: "A principle where a contractor who nearly completes performance with only minor defects may still recover payment, less damages.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
+  { q: "What are 'consequential damages' in a construction contract?", a: "Indirect damages from a breach such as lost profits or business interruption. Many contracts include a waiver of consequential damages.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
+  { q: "What is the 'economic loss rule' in construction law?", a: "A doctrine preventing recovery in tort for purely economic losses from a contractual relationship — must sue under contract, not negligence.", ch: "NASCLA Ch. 3 / Ch. 13", section: "Business" },
+  { q: "What is the critical path in a project schedule?", a: "The longest sequence of dependent tasks that determines the minimum project duration — any delay here delays the whole project.", ch: "NASCLA Ch. 7 — Project Scheduling", section: "Project" },
   { q: "What does CPM stand for in project scheduling?", a: "Critical Path Method — a scheduling technique that identifies the sequence of tasks with no float (slack).", ch: "NASCLA Ch. 7 — Project Scheduling", section: "Project" },
   { q: "What is 'float' (or slack) in project scheduling?", a: "The amount of time a task can be delayed without delaying the project's overall completion date.", ch: "NASCLA Ch. 7 — Project Scheduling", section: "Project" },
-  { q: "What is a Gantt chart?", a: "A bar chart used to illustrate a project schedule, showing tasks, durations, and their relationship to a timeline.", ch: "NASCLA Ch. 7 — Project Scheduling", section: "Project" },
+  { q: "What is a Gantt chart?", a: "A bar chart illustrating a project schedule, showing tasks, durations, and their relationship to a timeline.", ch: "NASCLA Ch. 7 — Project Scheduling", section: "Project" },
   { q: "What is a 'punch list'?", a: "A list of items that must be completed or corrected by the contractor before final payment is released at project closeout.", ch: "NASCLA Ch. 7 — Project Management", section: "Project" },
   { q: "What does 'substantial completion' mean?", a: "The point at which the work is sufficiently complete that the owner can use or occupy the facility for its intended purpose.", ch: "NASCLA Ch. 3 / Ch. 7", section: "Project" },
-  { q: "What is a 'submittal' in construction?", a: "Shop drawings, product data, or samples submitted by the contractor for the architect/engineer's review and approval before ordering or installing materials.", ch: "NASCLA Ch. 7 — Project Management", section: "Project" },
-  { q: "What is an RFI in construction?", a: "Request for Information — a formal written request from the contractor to the designer asking for clarification on contract documents.", ch: "NASCLA Ch. 7 — Project Management", section: "Project" },
-  { q: "What is 'overhead' in a construction estimate?", a: "Indirect costs of running a construction business not directly tied to a specific project (office rent, insurance, vehicles, administrative salaries).", ch: "NASCLA Ch. 8 — Estimating", section: "Project" },
-  { q: "What is the difference between 'direct costs' and 'indirect costs'?", a: "Direct costs are tied directly to a specific project (labor, materials, equipment). Indirect costs (overhead) support the business overall and are spread across projects.", ch: "NASCLA Ch. 8 — Estimating", section: "Project" },
+  { q: "What is a 'submittal' in construction?", a: "Shop drawings, product data, or samples submitted by the contractor for the architect/engineer's review before installation.", ch: "NASCLA Ch. 7 — Project Management", section: "Project" },
+  { q: "What is an RFI in construction?", a: "Request for Information — a formal written request from the contractor to the designer for clarification on contract documents.", ch: "NASCLA Ch. 7 — Project Management", section: "Project" },
+  { q: "What is 'overhead' in a construction estimate?", a: "Indirect costs of running the business not tied to a specific project — office rent, insurance, vehicles, administrative salaries.", ch: "NASCLA Ch. 8 — Estimating", section: "Project" },
   { q: "What is a 'quantity takeoff'?", a: "The process of measuring and counting all materials and labor required to complete a project, used as the basis for an estimate.", ch: "NASCLA Ch. 8 — Estimating", section: "Project" },
-  { q: "What does 'profit margin' represent in an estimate?", a: "The percentage of the total project price that represents the contractor's profit after all costs (direct and indirect) are paid.", ch: "NASCLA Ch. 8 — Estimating", section: "Project" },
   { q: "What is a 'contingency' in an estimate?", a: "A dollar amount or percentage added to an estimate to cover unforeseen conditions or risks.", ch: "NASCLA Ch. 8 — Estimating", section: "Project" },
   { q: "What is 'value engineering'?", a: "A systematic review of a project to find ways to reduce costs while maintaining required function and quality.", ch: "NASCLA Ch. 7 — Project Management", section: "Project" },
-  { q: "What is the purpose of a 'schedule of values'?", a: "A breakdown of the contract price by work items or phases, used as the basis for monthly progress payment applications.", ch: "NASCLA Ch. 7 — Project Management", section: "Project" },
-  { q: "What is 'retainage'?", a: "A percentage (typically 5–10%) withheld from each progress payment as security that the contractor will complete the work; released at substantial or final completion.", ch: "NASCLA Ch. 7 — Project Management", section: "Project" },
-  { q: "What is a 'notice of completion'?", a: "A document filed by the owner after project completion to establish the start of the lien filing deadline period for contractors and suppliers.", ch: "NASCLA Ch. 4 — Liens", section: "Project" },
-  { q: "What is 'as-built' documentation?", a: "Drawings revised during construction to show the actual location, size, and conditions of all elements as they were actually installed.", ch: "NASCLA Ch. 7 — Project Management", section: "Project" },
-  { q: "What is the purpose of a daily construction log?", a: "To record daily site activities, weather, manpower, equipment used, visitors, and any problems or delays — creating a legal record of project progress.", ch: "NASCLA Ch. 7 — Project Management", section: "Project" },
-  { q: "What is 'equipment depreciation' in construction accounting?", a: "The reduction in value of equipment over time, recorded as a cost in the company's financial statements.", ch: "NASCLA Ch. 9 — Financial Management", section: "Project" },
-  { q: "What is design-bid-build (DBB)?", a: "A traditional project delivery method where the owner hires a designer separately, then takes bids from contractors to build based on completed drawings.", ch: "NASCLA Ch. 6 — Project Delivery", section: "Project" },
+  { q: "What is the purpose of a 'schedule of values'?", a: "A breakdown of the contract price by work items used as the basis for monthly progress payment applications.", ch: "NASCLA Ch. 7 — Project Management", section: "Project" },
+  { q: "What is 'retainage'?", a: "A percentage (typically 5–10%) withheld from each progress payment as security; released at substantial or final completion.", ch: "NASCLA Ch. 7 — Project Management", section: "Project" },
+  { q: "What are 'as-built' drawings?", a: "Drawings revised during construction to show the actual location, size, and conditions of all elements as actually installed.", ch: "NASCLA Ch. 7 — Project Management", section: "Project" },
+  { q: "What is the purpose of a daily construction log?", a: "To record daily site activities, weather, manpower, equipment, visitors, and problems — creating a legal record of project progress.", ch: "NASCLA Ch. 7 — Project Management", section: "Project" },
+  { q: "What is design-bid-build (DBB)?", a: "A traditional delivery method where the owner hires a designer separately, then takes bids from contractors to build from completed drawings.", ch: "NASCLA Ch. 6 — Project Delivery", section: "Project" },
   { q: "What is design-build (DB)?", a: "A project delivery method where a single entity contracts with the owner for both design and construction services.", ch: "NASCLA Ch. 6 — Project Delivery", section: "Project" },
   { q: "What is construction management at-risk (CMAR)?", a: "A delivery method where a construction manager acts as general contractor and provides a guaranteed maximum price (GMP) to the owner.", ch: "NASCLA Ch. 6 — Project Delivery", section: "Project" },
-  { q: "What is a 'guaranteed maximum price' (GMP)?", a: "A contract provision where the contractor agrees the total cost will not exceed a stated maximum, with any savings typically shared with the owner.", ch: "NASCLA Ch. 6 — Project Delivery", section: "Project" },
-  { q: "What is 'bid shopping'?", a: "The unethical practice of a general contractor revealing one subcontractor's bid price to other subs to get a lower price after winning the prime contract.", ch: "NASCLA Ch. 6 / Ethics", section: "Project" },
-  { q: "What is an 'invitation to bid' (ITB)?", a: "A document sent by an owner to contractors inviting them to submit bids for a specific project, including all necessary bid documents.", ch: "NASCLA Ch. 6 — Project Delivery", section: "Project" },
-  { q: "What is a 'request for proposal' (RFP)?", a: "A document soliciting proposals from contractors or consultants, used for negotiated contracts where qualifications and approach matter, not just price.", ch: "NASCLA Ch. 6 — Project Delivery", section: "Project" },
-  { q: "What is an 'addendum' in the bidding process?", a: "A written modification to the bid documents issued before bids are received, clarifying or changing the requirements.", ch: "NASCLA Ch. 6 — Project Delivery", section: "Project" },
-  { q: "What is the purpose of a 'pre-bid conference'?", a: "A meeting held before bids are submitted to allow contractors to inspect the site and ask questions about the project requirements.", ch: "NASCLA Ch. 6 — Project Delivery", section: "Project" },
-  { q: "What is 'bid bond forfeiture'?", a: "When a contractor who wins a bid refuses to enter into the contract, the bid bond amount (typically 5–10% of the bid) is forfeited to the owner.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Project" },
-
-  // SECTION 3: Financial Management
-  { q: "What is the difference between cash-basis and accrual-basis accounting?", a: "Cash-basis records income/expenses when cash is received or paid. Accrual-basis records them when earned or incurred, regardless of when cash changes hands.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
+  { q: "What is 'bid shopping'?", a: "The unethical practice of revealing one subcontractor's bid to others to get a lower price after winning the prime contract.", ch: "NASCLA Ch. 6 / Ethics", section: "Project" },
+  { q: "What is an 'addendum' in the bidding process?", a: "A written modification to the bid documents issued before bids are received, clarifying or changing requirements.", ch: "NASCLA Ch. 6 — Project Delivery", section: "Project" },
+  { q: "What is 'bid bond forfeiture'?", a: "When a contractor who wins a bid refuses to enter the contract, the bid bond amount (typically 5–10%) is forfeited to the owner.", ch: "NASCLA Ch. 5 — Bonds and Insurance", section: "Project" },
+  { q: "What is the difference between cash-basis and accrual-basis accounting?", a: "Cash-basis records income/expenses when cash is received or paid; accrual-basis records them when earned or incurred.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
   { q: "What is a balance sheet?", a: "A financial statement showing a company's assets, liabilities, and owner's equity at a specific point in time.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
   { q: "What is the accounting equation?", a: "Assets = Liabilities + Owner's Equity", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
-  { q: "What is an income statement (profit and loss statement)?", a: "A financial statement showing revenues, costs, and expenses over a specific period, resulting in a net profit or loss.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
-  { q: "What is 'accounts receivable'?", a: "Money owed to a contractor by owners or clients for work that has been completed but not yet paid.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
-  { q: "What is 'accounts payable'?", a: "Money a contractor owes to suppliers, subcontractors, or others for goods and services received but not yet paid.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
-  { q: "What is 'working capital'?", a: "Current assets minus current liabilities — the funds available to meet short-term obligations and run day-to-day operations.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
-  { q: "What is the 'current ratio'?", a: "Current Assets ÷ Current Liabilities — measures ability to pay short-term obligations. A ratio above 1.0 is generally considered healthy.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
-  { q: "What is a 'job cost report'?", a: "A financial report comparing estimated costs to actual costs for a specific project, used to track profitability and identify variances.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
-  { q: "What is 'overbilling'?", a: "When a contractor bills for more work than has actually been completed — also called 'billing in excess of costs.'", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
-  { q: "What is 'underbilling'?", a: "When a contractor has completed more work than they have billed — also called 'costs in excess of billings.'", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
-  { q: "What does 'bonding capacity' refer to?", a: "The maximum dollar amount of work a surety company will bond for a contractor at any one time, based on the contractor's financial strength.", ch: "NASCLA Ch. 5 / Ch. 9", section: "Financial" },
-  { q: "What is 'cash flow' in construction?", a: "The timing of money coming in (revenue) and going out (expenses) during a project — managing it ensures the contractor can pay bills while waiting for payments.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
-  { q: "What is a 'draw schedule'?", a: "A predetermined schedule for when the contractor will submit payment applications and when the owner will release funds during a project.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
+  { q: "What is an income statement?", a: "A financial statement showing revenues, costs, and expenses over a period, resulting in a net profit or loss.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
+  { q: "What is 'accounts receivable'?", a: "Money owed to a contractor by clients for completed work not yet paid.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
+  { q: "What is 'accounts payable'?", a: "Money a contractor owes to suppliers or subcontractors for goods and services received but not yet paid.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
+  { q: "What is 'working capital'?", a: "Current assets minus current liabilities — funds available to meet short-term obligations and run day-to-day operations.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
+  { q: "What is the 'current ratio'?", a: "Current Assets divided by Current Liabilities — measures ability to pay short-term obligations. Above 1.0 is generally healthy.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
+  { q: "What is a 'job cost report'?", a: "A financial report comparing estimated costs to actual costs for a project, used to track profitability and identify variances.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
+  { q: "What is 'overbilling'?", a: "When a contractor bills for more work than actually completed — also called 'billing in excess of costs.'", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
+  { q: "What is 'underbilling'?", a: "When a contractor has completed more work than billed — also called 'costs in excess of billings.'", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
+  { q: "What is 'cash flow' in construction?", a: "The timing of money coming in (revenue) and going out (expenses) — managing it ensures you can pay bills while waiting on payments.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
   { q: "What are 'fixed costs'?", a: "Costs that remain constant regardless of production level — office rent, salaries, insurance premiums.", ch: "NASCLA Ch. 9 — Financial Management", section: "Financial" },
-
-  // SECTION 4: Safety & Labor
+  { q: "What does 'bonding capacity' refer to?", a: "The maximum dollar amount of work a surety will bond for a contractor at one time, based on the contractor's financial strength.", ch: "NASCLA Ch. 5 / Ch. 9", section: "Financial" },
   { q: "What federal agency enforces workplace safety regulations for construction?", a: "OSHA — the Occupational Safety and Health Administration, under the U.S. Department of Labor.", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
-  { q: "What is OSHA's 'General Duty Clause'?", a: "A provision requiring employers to provide a workplace free from recognized hazards that are causing or likely to cause death or serious physical harm.", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
-  { q: "What is a 'hazard communication' (HazCom) program?", a: "An OSHA-required program ensuring workers are informed about hazardous chemicals through labels, Safety Data Sheets (SDS), and training.", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
-  { q: "What is a Safety Data Sheet (SDS)?", a: "A document providing detailed information about a hazardous chemical, including health hazards, safe handling, and emergency procedures.", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
+  { q: "What is OSHA's 'General Duty Clause'?", a: "A provision requiring employers to provide a workplace free from recognized hazards likely to cause death or serious physical harm.", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
+  { q: "What is a Safety Data Sheet (SDS)?", a: "A document providing detailed information about a hazardous chemical — health hazards, safe handling, and emergency procedures.", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
   { q: "At what height must fall protection be provided on a construction site?", a: "Six (6) feet above a lower level for most construction activities, per OSHA 29 CFR 1926.502.", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
-  { q: "What is a 'competent person' as defined by OSHA?", a: "Someone capable of identifying existing and predictable hazards and who has the authority to take prompt corrective action to eliminate them.", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
-  { q: "What is 'lockout/tagout' (LOTO)?", a: "An OSHA-required procedure to ensure dangerous machines are properly shut off and cannot be restarted before maintenance or servicing work begins.", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
-  { q: "What is the minimum trench depth that requires a protective system?", a: "Five (5) feet deep or more (or less if a competent person determines hazardous conditions exist).", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
+  { q: "What is a 'competent person' as defined by OSHA?", a: "Someone capable of identifying existing and predictable hazards who has authority to take prompt corrective action to eliminate them.", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
+  { q: "What is 'lockout/tagout' (LOTO)?", a: "An OSHA-required procedure ensuring dangerous machines are properly shut off and cannot be restarted before maintenance begins.", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
+  { q: "What is the minimum trench depth requiring a protective system?", a: "Five (5) feet deep or more — or less if a competent person determines hazardous conditions exist.", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
   { q: "What does the Fair Labor Standards Act (FLSA) regulate?", a: "Minimum wage, overtime pay, recordkeeping, and child labor standards affecting full-time and part-time workers.", ch: "NASCLA Ch. 11 — Labor Laws", section: "Safety" },
-  { q: "What is the Davis-Bacon Act?", a: "A federal law requiring contractors on federal public works projects to pay the 'prevailing wage' rate for that locality to all workers.", ch: "NASCLA Ch. 11 — Labor Laws", section: "Safety" },
-  { q: "What is the difference between an employee and an independent contractor for tax purposes?", a: "Employees have taxes withheld and receive W-2s; independent contractors receive 1099s and pay their own self-employment taxes.", ch: "NASCLA Ch. 11 — Labor Laws", section: "Safety" },
-  { q: "What is the purpose of Form I-9?", a: "To verify the identity and employment authorization (eligibility to work in the U.S.) of individuals hired for employment.", ch: "NASCLA Ch. 11 — Labor Laws", section: "Safety" },
-  { q: "What is 'FICA' withholding?", a: "Federal Insurance Contributions Act — payroll taxes withheld for Social Security and Medicare, split equally between employer and employee.", ch: "NASCLA Ch. 11 — Labor Laws", section: "Safety" },
+  { q: "What is the Davis-Bacon Act?", a: "A federal law requiring contractors on federal public works projects to pay the 'prevailing wage' rate for that locality.", ch: "NASCLA Ch. 11 — Labor Laws", section: "Safety" },
+  { q: "What is 'FICA' withholding?", a: "Federal Insurance Contributions Act — payroll taxes for Social Security and Medicare, split equally between employer and employee.", ch: "NASCLA Ch. 11 — Labor Laws", section: "Safety" },
   { q: "What is an OSHA 300 log?", a: "The Log of Work-Related Injuries and Illnesses — employers must record qualifying workplace injuries and illnesses on this form.", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
-  { q: "What is the penalty for a 'willful' OSHA violation?", a: "Up to $156,259 per violation (amounts adjusted periodically for inflation).", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
-
-  // SECTION 5: Virginia Code — Administration
+  { q: "What is the penalty for a 'willful' OSHA violation?", a: "Up to $156,259 per violation (adjusted periodically for inflation).", ch: "NASCLA Ch. 10 — Safety", section: "Safety" },
+  { q: "What is the purpose of Form I-9?", a: "To verify the identity and employment authorization (eligibility to work in the U.S.) of individuals hired for employment.", ch: "NASCLA Ch. 11 — Labor Laws", section: "Safety" },
   { q: "What is the Virginia Uniform Statewide Building Code (USBC)?", a: "Virginia's statewide building code based on the IBC with Virginia amendments, regulating construction, alteration, and repair of buildings.", ch: "VUSBC Part I, Ch. 1 — Scope and Administration", section: "Virginia" },
-  { q: "Which document is the primary model code on which the 2018 VUSBC is based?", a: "The 2015 International Building Code (IBC), as adopted and amended by Virginia.", ch: "VUSBC Part I, Ch. 1 — Scope and Administration", section: "Virginia" },
+  { q: "Which model code is the 2018 VUSBC primarily based on?", a: "The 2015 International Building Code (IBC), as adopted and amended by Virginia.", ch: "VUSBC Part I, Ch. 1", section: "Virginia" },
   { q: "Who enforces the VUSBC at the local level?", a: "The local building official (or building department) of the jurisdiction where the work is located.", ch: "VUSBC Part I, Ch. 1 — Sec. 101", section: "Virginia" },
   { q: "What state agency has authority over the VUSBC?", a: "The Virginia Department of Housing and Community Development (DHCD).", ch: "VUSBC Part I, Ch. 1", section: "Virginia" },
-  { q: "When is a building permit required in Virginia?", a: "Before beginning construction, enlargement, alteration, repair, removal, demolition, or change of occupancy of a building or structure.", ch: "VUSBC Part I, Ch. 1 — Sec. 108", section: "Virginia" },
-  { q: "Which of the following typically does NOT require a building permit in Virginia?", a: "Ordinary repairs that do not involve structural work or regulated systems (e.g., painting, wallpapering, minor patching).", ch: "VUSBC Part I, Ch. 1 — Sec. 108.2", section: "Virginia" },
-  { q: "Who is responsible for obtaining building permits in Virginia?", a: "The owner or authorized agent (typically the contractor) who is in charge of the work.", ch: "VUSBC Part I, Ch. 1 — Sec. 108", section: "Virginia" },
-  { q: "How long is a building permit valid in Virginia under the USBC?", a: "A building permit expires if work is not commenced within 6 months, or if work is suspended or abandoned for 6 months.", ch: "VUSBC Part I, Ch. 1 — Sec. 108.8", section: "Virginia" },
+  { q: "When is a building permit required in Virginia?", a: "Before beginning construction, enlargement, alteration, repair, removal, demolition, or change of occupancy of a building.", ch: "VUSBC Part I, Ch. 1 — Sec. 108", section: "Virginia" },
+  { q: "How long is a building permit valid under the VUSBC?", a: "It expires if work is not commenced within 6 months, or if work is suspended or abandoned for 6 months.", ch: "VUSBC Part I, Ch. 1 — Sec. 108.8", section: "Virginia" },
   { q: "What must be posted at the job site during construction?", a: "The building permit must be posted in a conspicuous place on the premises.", ch: "VUSBC Part I, Ch. 1 — Sec. 108.4", section: "Virginia" },
-  { q: "Who may appeal a building official's decision in Virginia?", a: "The owner or permit holder may appeal to the local building code board of appeals (or state Building Code Technical Review Board if no local board exists).", ch: "VUSBC Part I, Ch. 1 — Sec. 113", section: "Virginia" },
-  { q: "What is a 'certificate of occupancy' (CO)?", a: "A document issued by the building official certifying that a building or space complies with the building code and is safe for occupancy.", ch: "VUSBC Part I, Ch. 1 — Sec. 111", section: "Virginia" },
-  { q: "When must a certificate of occupancy be obtained?", a: "Before a new building or portion thereof is occupied, or before a change of occupancy occurs.", ch: "VUSBC Part I, Ch. 1 — Sec. 111", section: "Virginia" },
-  { q: "What is a 'temporary certificate of occupancy' (TCO)?", a: "A certificate issued to allow temporary occupancy of a building or portion thereof while remaining work is completed.", ch: "VUSBC Part I, Ch. 1 — Sec. 111.3", section: "Virginia" },
-  { q: "What authority does a building official have to stop construction?", a: "The building official may issue a 'stop work order' when work is proceeding contrary to the building code or permit.", ch: "VUSBC Part I, Ch. 1 — Sec. 115", section: "Virginia" },
+  { q: "What is a 'certificate of occupancy' (CO)?", a: "A document issued by the building official certifying a building complies with the code and is safe for occupancy.", ch: "VUSBC Part I, Ch. 1 — Sec. 111", section: "Virginia" },
+  { q: "What is a 'temporary certificate of occupancy' (TCO)?", a: "A certificate allowing temporary occupancy of a building or portion while remaining work is completed.", ch: "VUSBC Part I, Ch. 1 — Sec. 111.3", section: "Virginia" },
+  { q: "What authority does a building official have to stop construction?", a: "The building official may issue a 'stop work order' when work proceeds contrary to the building code or permit.", ch: "VUSBC Part I, Ch. 1 — Sec. 115", section: "Virginia" },
   { q: "What is the consequence of failing to obtain required inspections under the VUSBC?", a: "The building official may require removal or uncovering of the work at the permit holder's expense.", ch: "VUSBC Part I, Ch. 1 — Sec. 110", section: "Virginia" },
-  { q: "What are 'construction documents' as defined by the VUSBC?", a: "Written, graphic, and pictorial documents prepared for describing the design, location, and physical characteristics of the elements of a project.", ch: "VUSBC Part I, Ch. 1 — Sec. 107", section: "Virginia" },
-  { q: "What is the VUSBC's definition of 'alteration'?", a: "Any construction or renovation of an existing structure other than a repair or addition.", ch: "VUSBC Part I, Ch. 2 — Definitions", section: "Virginia" },
-  { q: "What does 'change of occupancy' mean under the VUSBC?", a: "A change in the use of a building or a portion of a building that results in a change in the application of code requirements.", ch: "VUSBC Part I, Ch. 2 — Definitions", section: "Virginia" },
-  { q: "What agency regulates contractor licensing in Virginia?", a: "The Department of Professional and Occupational Regulation (DPOR) through the Board for Contractors.", ch: "Virginia Code Title 54.1 / DPOR regulations", section: "Virginia" },
-  { q: "What is the difference between a Class A and Class B contractor license in Virginia?", a: "Class A: no limit on single project value or total annual work. Class B: single project limited to less than $120,000 and total annual volume less than $750,000.", ch: "Virginia Board for Contractors regulations", section: "Virginia" },
-  { q: "What is a Class C contractor license in Virginia?", a: "Limited to projects less than $10,000 per single contract and total annual volume less than $150,000.", ch: "Virginia Board for Contractors regulations", section: "Virginia" },
+  { q: "What does 'change of occupancy' mean under the VUSBC?", a: "A change in the use of a building that results in a change in the application of code requirements.", ch: "VUSBC Part I, Ch. 2 — Definitions", section: "Virginia" },
+  { q: "What agency regulates contractor licensing in Virginia?", a: "The Department of Professional and Occupational Regulation (DPOR) through the Board for Contractors.", ch: "Virginia Code Title 54.1", section: "Virginia" },
+  { q: "What is the difference between a Class A and Class B contractor license in Virginia?", a: "Class A: no limit on project value or annual volume. Class B: single project under $120,000 and annual volume under $750,000.", ch: "Virginia Board for Contractors regulations", section: "Virginia" },
+  { q: "What is a Class C contractor license in Virginia?", a: "Limited to projects under $10,000 per contract and annual volume under $150,000.", ch: "Virginia Board for Contractors regulations", section: "Virginia" },
   { q: "How long is a Virginia contractor license valid?", a: "Two (2) years.", ch: "Virginia Board for Contractors regulations", section: "Virginia" },
-  { q: "Can a contractor in Virginia subcontract work to an unlicensed contractor?", a: "No — it is a violation for a licensed contractor to knowingly employ or subcontract with an unlicensed contractor for work requiring a license.", ch: "Virginia Code Title 54.1", section: "Virginia" },
-  { q: "What must every Virginia contractor include in their contracts with consumers?", a: "Their Virginia contractor license number.", ch: "Virginia Code Title 54.1 — Sec. 54.1-1138", section: "Virginia" },
-  { q: "What is the purpose of a 'special inspection' under the building code?", a: "Inspections of specific materials or installations performed by a qualified inspector to verify compliance with approved construction documents.", ch: "VUSBC Part I, Ch. 17 — Special Inspections", section: "Virginia" },
-  { q: "In Virginia, how many days does a general contractor have to file a mechanic's lien after the last day of work?", a: "90 days from the last day work was performed or materials were furnished.", ch: "Virginia Code Title 43 — Sec. 43-4", section: "Virginia" },
-  { q: "What is Virginia's 'Little Miller Act'?", a: "Requires payment and performance bonds on state and local government public construction contracts over $500,000, protecting subcontractors and suppliers.", ch: "Virginia Code Title 2.2 — Sec. 2.2-4337", section: "Virginia" },
-  { q: "What is 'prompt payment' law in Virginia?", a: "Laws requiring owners to pay contractors and contractors to pay subcontractors within specified time periods, with interest penalties for late payment.", ch: "Virginia Code Title 2.2 and Title 11 — Prompt Payment Act", section: "Virginia" },
-
-  // SECTION 6: Occupancy & Construction Types
-  { q: "What is an 'occupancy classification'?", a: "The category assigned to a building based on use and relative safety of occupants — determines which code requirements apply.", ch: "VUSBC Part I, Ch. 3 — Use and Occupancy Classification", section: "Occupancy" },
-  { q: "What occupancy group is a single-family home classified as?", a: "Group R-3 (Residential — one- and two-family dwellings not covered by the IRC).", ch: "VUSBC Part I, Ch. 3 — Sec. 310", section: "Occupancy" },
-  { q: "What does 'Group A' occupancy represent?", a: "Assembly uses — places where people gather for civic, social, or religious functions, recreation, food/drink consumption, or entertainment.", ch: "VUSBC Part I, Ch. 3 — Sec. 303", section: "Occupancy" },
+  { q: "What must every Virginia contractor include in contracts with consumers?", a: "Their Virginia contractor license number.", ch: "Virginia Code Title 54.1 — Sec. 54.1-1138", section: "Virginia" },
+  { q: "In Virginia, how many days does a GC have to file a mechanic's lien after the last day of work?", a: "90 days from the last day work was performed or materials were furnished.", ch: "Virginia Code Title 43 — Sec. 43-4", section: "Virginia" },
+  { q: "What is Virginia's 'Little Miller Act'?", a: "Requires payment and performance bonds on public construction contracts over $500,000, protecting subcontractors and suppliers.", ch: "Virginia Code Title 2.2 — Sec. 2.2-4337", section: "Virginia" },
+  { q: "What is 'prompt payment' law in Virginia?", a: "Laws requiring owners to pay contractors, and contractors to pay subs, within specified timeframes with interest for late payment.", ch: "Virginia Code Title 2.2 and Title 11", section: "Virginia" },
+  { q: "What is a 'Notice of Commencement' in Virginia?", a: "A document recorded by the owner before construction begins that establishes the project start for lien law purposes.", ch: "Virginia Code Title 43 — Mechanic's Liens", section: "Virginia" },
+  { q: "What is an 'occupancy classification'?", a: "The category assigned to a building based on use and relative safety of occupants — determines which code requirements apply.", ch: "VUSBC Part I, Ch. 3", section: "Occupancy" },
+  { q: "What occupancy group is a single-family home classified as?", a: "Group R-3 (Residential — one- and two-family dwellings not regulated by the IRC).", ch: "VUSBC Part I, Ch. 3 — Sec. 310", section: "Occupancy" },
+  { q: "What does 'Group A' occupancy represent?", a: "Assembly uses — places where people gather for civic, social, religious, recreational, or entertainment purposes.", ch: "VUSBC Part I, Ch. 3 — Sec. 303", section: "Occupancy" },
   { q: "What is a 'Group B' occupancy?", a: "Business uses — offices, banks, professional or service transactions, and similar uses.", ch: "VUSBC Part I, Ch. 3 — Sec. 304", section: "Occupancy" },
   { q: "What is a 'Group M' occupancy?", a: "Mercantile uses — stores, markets, shops, and salesrooms where merchandise is displayed and sold.", ch: "VUSBC Part I, Ch. 3 — Sec. 309", section: "Occupancy" },
-  { q: "What does 'Group I' occupancy represent?", a: "Institutional uses — supervised environments such as hospitals, nursing homes, detoxification facilities, and correctional facilities.", ch: "VUSBC Part I, Ch. 3 — Sec. 308", section: "Occupancy" },
-  { q: "What is a 'Group S' occupancy?", a: "Storage uses — buildings used for storage of goods, wares, or merchandise.", ch: "VUSBC Part I, Ch. 3 — Sec. 311", section: "Occupancy" },
-  { q: "What is a 'Group F' occupancy?", a: "Factory and Industrial uses — facilities for assembling, fabricating, finishing, manufacturing, or processing operations.", ch: "VUSBC Part I, Ch. 3 — Sec. 306", section: "Occupancy" },
-  { q: "What is a 'Group H' occupancy?", a: "High-hazard uses — buildings with materials that pose physical or health hazards (flammable, combustible, explosive, toxic).", ch: "VUSBC Part I, Ch. 3 — Sec. 307", section: "Occupancy" },
-  { q: "What is a 'mixed occupancy' building?", a: "A building containing more than one occupancy group, which may be treated as separated or non-separated occupancies depending on the design.", ch: "VUSBC Part I, Ch. 3 — Sec. 302.3", section: "Occupancy" },
-  { q: "How many construction types does the IBC/VUSBC define?", a: "Five types: Type I, Type II, Type III, Type IV, and Type V.", ch: "VUSBC Part I, Ch. 6 — Types of Construction", section: "Occupancy" },
+  { q: "What does 'Group I' occupancy represent?", a: "Institutional uses — supervised environments such as hospitals, nursing homes, and correctional facilities.", ch: "VUSBC Part I, Ch. 3 — Sec. 308", section: "Occupancy" },
+  { q: "What is a 'Group H' occupancy?", a: "High-hazard uses — buildings with materials that pose physical or health hazards (flammable, explosive, toxic).", ch: "VUSBC Part I, Ch. 3 — Sec. 307", section: "Occupancy" },
+  { q: "What is a 'Group F' occupancy?", a: "Factory and Industrial uses — facilities for assembling, fabricating, finishing, or processing operations.", ch: "VUSBC Part I, Ch. 3 — Sec. 306", section: "Occupancy" },
   { q: "What is 'Type I' construction?", a: "The most fire-resistive type — structural elements are non-combustible (steel, concrete) with the highest fire-resistance ratings.", ch: "VUSBC Part I, Ch. 6 — Sec. 602.2", section: "Occupancy" },
-  { q: "What is 'Type V' construction?", a: "The least restrictive type — structural elements, exterior walls, and interior walls may be any material permitted by the code (typically wood framing).", ch: "VUSBC Part I, Ch. 6 — Sec. 602.5", section: "Occupancy" },
-  { q: "What does 'fire-resistance rating' mean?", a: "The period of time (in hours) that a building element can withstand fire exposure without losing structural integrity or allowing fire passage.", ch: "VUSBC Part I, Ch. 7 — Fire and Smoke Protection", section: "Occupancy" },
-  { q: "What is the purpose of a 'fire wall'?", a: "To divide a building into separate areas to restrict fire spread, with enough structural stability to remain standing if either side collapses.", ch: "VUSBC Part I, Ch. 7 — Sec. 706", section: "Occupancy" },
-  { q: "What is a 'fire barrier'?", a: "A fire-resistance-rated wall assembly used to limit the spread of fire that is not required to be structurally stable after collapse on either side.", ch: "VUSBC Part I, Ch. 7 — Sec. 707", section: "Occupancy" },
-  { q: "When are automatic sprinkler systems required under the VUSBC?", a: "In most commercial buildings and in residential buildings over certain heights or sizes — thresholds depend on occupancy type, construction type, and building height/area.", ch: "VUSBC Part I, Ch. 9 — Fire Protection Systems", section: "Occupancy" },
+  { q: "What is 'Type V' construction?", a: "The least restrictive type — structural elements, exterior and interior walls may be any material permitted (typically wood framing).", ch: "VUSBC Part I, Ch. 6 — Sec. 602.5", section: "Occupancy" },
+  { q: "What does 'fire-resistance rating' mean?", a: "The time in hours a building element can withstand fire exposure without losing structural integrity or allowing fire passage.", ch: "VUSBC Part I, Ch. 7 — Fire and Smoke Protection", section: "Occupancy" },
+  { q: "What is the purpose of a 'fire wall'?", a: "To divide a building to restrict fire spread, with enough structural stability to stand if either side collapses.", ch: "VUSBC Part I, Ch. 7 — Sec. 706", section: "Occupancy" },
+  { q: "What is a 'fire barrier'?", a: "A fire-resistance-rated wall assembly to limit fire spread — not required to remain stable after collapse on either side.", ch: "VUSBC Part I, Ch. 7 — Sec. 707", section: "Occupancy" },
   { q: "What is the purpose of a 'smoke barrier'?", a: "A continuous membrane that restricts the movement of smoke through a building.", ch: "VUSBC Part I, Ch. 7 — Sec. 709", section: "Occupancy" },
-  { q: "What is 'fire-stopping'?", a: "Materials or systems used to fill openings through fire-resistance-rated assemblies to prevent the passage of fire and hot gases.", ch: "VUSBC Part I, Ch. 7 — Sec. 714/715", section: "Occupancy" },
+  { q: "What is 'fire-stopping'?", a: "Materials used to fill openings through fire-rated assemblies to prevent passage of fire and hot gases.", ch: "VUSBC Part I, Ch. 7 — Sec. 714/715", section: "Occupancy" },
   { q: "What is a 'live load' in structural design?", a: "The weight of occupants, furniture, equipment, and other movable loads that a structure must support.", ch: "VUSBC Part I, Ch. 16 — Structural Design", section: "Occupancy" },
-  { q: "What is a 'dead load'?", a: "The weight of permanent structural and non-structural components — the building itself: framing, sheathing, roofing, flooring, fixed equipment.", ch: "VUSBC Part I, Ch. 16 — Structural Design", section: "Occupancy" },
-
-  // SECTION 7: Means of Egress
+  { q: "What is a 'dead load'?", a: "The weight of permanent structural and non-structural components — framing, sheathing, roofing, flooring, fixed equipment.", ch: "VUSBC Part I, Ch. 16 — Structural Design", section: "Occupancy" },
+  { q: "What is 'snow load' in structural design?", a: "The force applied to a roof structure from accumulated snow and ice — varies by geographic location.", ch: "VUSBC Part I, Ch. 16 — Structural Design", section: "Occupancy" },
+  { q: "What is 'seismic design category'?", a: "A classification assigned to a building based on occupancy category and expected ground motion severity — affects required structural design.", ch: "VUSBC Part I, Ch. 16 — Structural Design", section: "Occupancy" },
   { q: "What are the three components of a means of egress system?", a: "Exit access, exit, and exit discharge.", ch: "VUSBC Part I, Ch. 10 — Means of Egress", section: "Egress" },
-  { q: "What is the minimum width of an exit door under the VUSBC?", a: "32 inches clear width (minimum), with most occupancies requiring 36 inches.", ch: "VUSBC Part I, Ch. 10 — Sec. 1010.1.1", section: "Egress" },
+  { q: "What is the minimum width of an exit door under the VUSBC?", a: "32 inches clear width minimum, with most occupancies requiring 36 inches.", ch: "VUSBC Part I, Ch. 10 — Sec. 1010.1.1", section: "Egress" },
   { q: "What is the maximum riser height for stairs under the building code?", a: "7 inches maximum riser height.", ch: "VUSBC Part I, Ch. 10 — Sec. 1011.5.2", section: "Egress" },
   { q: "What is the minimum tread depth for stairs?", a: "11 inches minimum tread depth.", ch: "VUSBC Part I, Ch. 10 — Sec. 1011.5.2", section: "Egress" },
-  { q: "When are two means of egress required from a space?", a: "When the occupant load exceeds 49 persons (for most occupancies), or when travel distance to a single exit exceeds code limits.", ch: "VUSBC Part I, Ch. 10 — Sec. 1006", section: "Egress" },
-  { q: "What is 'occupant load'?", a: "The number of persons for which a space is designed, calculated by dividing the floor area by the occupant load factor for that use.", ch: "VUSBC Part I, Ch. 10 — Sec. 1004", section: "Egress" },
-  { q: "What is 'exit access travel distance'?", a: "The maximum distance an occupant may travel from any point in a building to reach an exit — varies by occupancy and sprinkler system presence.", ch: "VUSBC Part I, Ch. 10 — Sec. 1017", section: "Egress" },
-  { q: "What is required for exit signs?", a: "Exit signs must be illuminated and placed so that no point in an exit access corridor is more than 100 feet from the nearest sign.", ch: "VUSBC Part I, Ch. 10 — Sec. 1013", section: "Egress" },
+  { q: "When are two means of egress required from a space?", a: "When the occupant load exceeds 49 persons for most occupancies, or when travel distance to a single exit exceeds code limits.", ch: "VUSBC Part I, Ch. 10 — Sec. 1006", section: "Egress" },
+  { q: "What is 'occupant load'?", a: "The number of persons for which a space is designed — floor area divided by the occupant load factor for that use.", ch: "VUSBC Part I, Ch. 10 — Sec. 1004", section: "Egress" },
+  { q: "What is required for exit signs?", a: "Exit signs must be illuminated and placed so no point in an exit access corridor is more than 100 feet from the nearest sign.", ch: "VUSBC Part I, Ch. 10 — Sec. 1013", section: "Egress" },
   { q: "What is the minimum headroom clearance required for stairways?", a: "6 feet 8 inches (80 inches) measured vertically from the tread nosing.", ch: "VUSBC Part I, Ch. 10 — Sec. 1011.3", section: "Egress" },
-  { q: "What is a 'corridor' under the building code?", a: "An enclosed exit access component that defines and provides a path of egress travel to an exit.", ch: "VUSBC Part I, Ch. 10 — Sec. 1020", section: "Egress" },
   { q: "What is an 'area of refuge'?", a: "An area where persons unable to use stairways can remain temporarily while waiting for emergency evacuation assistance.", ch: "VUSBC Part I, Ch. 10 — Means of Egress", section: "Egress" },
-
-  // SECTION 8: Environmental & Misc
-  { q: "What is the purpose of an erosion and sediment control plan?", a: "To minimize soil erosion and prevent sediment from leaving a construction site and polluting waterways, as required by state and local regulations.", ch: "NASCLA Ch. 12 / Virginia regulations", section: "Virginia" },
-  { q: "What federal law regulates storm water discharges from construction sites?", a: "The Clean Water Act (CWA) — enforced through the NPDES permit program.", ch: "NASCLA Ch. 12 — Environmental Regulations", section: "Virginia" },
-  { q: "What is 'bearing capacity' of soil?", a: "The maximum load per unit area that the soil can support without shearing or excessive settlement.", ch: "VUSBC Part I, Ch. 18 — Soils and Foundations", section: "Virginia" },
-  { q: "What is a 'percolation test' (perc test)?", a: "A test to determine how quickly soil absorbs water — used to size septic systems and determine suitability for on-site sewage disposal.", ch: "NASCLA / Environmental regulations", section: "Virginia" },
-  { q: "What is 'asbestos abatement'?", a: "The process of removing, encapsulating, or enclosing asbestos-containing materials to prevent exposure — requires licensed contractors and regulatory compliance.", ch: "NASCLA Ch. 12 — Environmental Regulations", section: "Virginia" },
-  { q: "What is lead-based paint (LBP) and when was it banned for residential use?", a: "Paint containing lead pigments — banned for residential use in the U.S. in 1978. Pre-1978 homes require special handling during renovation.", ch: "NASCLA Ch. 12 / EPA RRP Rule", section: "Virginia" },
-  { q: "What does the EPA's RRP Rule require?", a: "Renovation, Repair, and Painting — contractors working in pre-1978 homes must be EPA-certified and follow lead-safe work practices.", ch: "NASCLA Ch. 12 — Environmental Regulations", section: "Virginia" },
-  { q: "What is the minimum slope required for a flat roof to ensure drainage?", a: "1/4 inch per foot (2%) minimum slope toward drains.", ch: "VUSBC Part I, Ch. 15 — Roof Assemblies", section: "Virginia" },
+  { q: "What is 'exit access travel distance'?", a: "The maximum distance an occupant may travel from any point to reach an exit — varies by occupancy and sprinkler presence.", ch: "VUSBC Part I, Ch. 10 — Sec. 1017", section: "Egress" },
+  { q: "What is a 'corridor' under the building code?", a: "An enclosed exit access component that defines and provides a path of egress travel to an exit.", ch: "VUSBC Part I, Ch. 10 — Sec. 1020", section: "Egress" },
   { q: "What is GFCI protection and where is it required?", a: "Ground Fault Circuit Interrupter — protection from electrical shock. Required in bathrooms, kitchens, garages, outdoors, unfinished basements, and near pools.", ch: "NEC Article 210 — referenced by VUSBC", section: "Virginia" },
-  { q: "What is the minimum clearance required in front of an electrical panel?", a: "36 inches of clear working space in front of the panel (30 inches wide, 6'6\" high).", ch: "NEC Article 110 — referenced by VUSBC", section: "Virginia" },
-  { q: "What is 'substantial performance' doctrine in contract law?", a: "A legal principle where a contractor who has nearly completed performance (with only minor defects) may still recover payment, less damages for the incomplete work.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
-  { q: "What are 'consequential damages' in a construction contract?", a: "Indirect damages resulting from a breach — such as lost profits or business interruption. Many contracts include a 'waiver of consequential damages' clause.", ch: "NASCLA Ch. 3 — Contracts", section: "Business" },
-  { q: "What is the 'economic loss rule' in construction law?", a: "A legal doctrine preventing recovery in tort for purely economic losses that arise from a contractual relationship — parties must sue under contract, not negligence.", ch: "NASCLA Ch. 3 / Ch. 13", section: "Business" },
-  { q: "What is 'radon' and why is it a construction concern?", a: "A naturally occurring radioactive gas that can accumulate in buildings — construction in high-radon areas requires mitigation systems such as sub-slab depressurization.", ch: "NASCLA / VUSBC appendix", section: "Virginia" },
-  { q: "What is a 'Notice of Commencement' and why is it important in Virginia?", a: "A document recorded by the owner before construction begins that establishes the start of the project for lien law purposes — protects the owner and gives notice to subs and suppliers.", ch: "Virginia Code Title 43 — Mechanic's Liens", section: "Virginia" },
-  { q: "What federal law governs accessibility requirements for construction?", a: "The Americans with Disabilities Act (ADA) — Titles II and III apply to most commercial buildings.", ch: "VUSBC Part I / ADA cross-reference", section: "Virginia" },
-  { q: "What code standard is typically used for accessibility compliance under the building code?", a: "ICC A117.1 — Accessible and Usable Buildings and Facilities.", ch: "VUSBC Part I, Ch. 11 — Accessibility", section: "Virginia" },
-  { q: "What is 'snow load' in structural design?", a: "The force applied to a roof structure from accumulated snow and ice — varies by geographic location.", ch: "VUSBC Part I, Ch. 16 — Structural Design", section: "Occupancy" },
-  { q: "What is 'seismic design category'?", a: "A classification assigned to a building based on occupancy (risk) category and expected ground motion severity — affects required structural design.", ch: "VUSBC Part I, Ch. 16 — Structural Design", section: "Occupancy" },
-  { q: "What is the purpose of a 'stormwater pollution prevention plan' (SWPPP)?", a: "A site-specific plan identifying potential sources of pollution and describing practices to prevent stormwater contamination during construction.", ch: "NASCLA Ch. 12 — Environmental Regulations", section: "Virginia" }
+  { q: "What is the minimum clearance required in front of an electrical panel?", a: "36 inches of clear working space in front of the panel (30 inches wide, 6 feet 6 inches high).", ch: "NEC Article 110 — referenced by VUSBC", section: "Virginia" },
+  { q: "What is the minimum slope required for a flat roof to ensure drainage?", a: "1/4 inch per foot (2%) minimum slope toward drains.", ch: "VUSBC Part I, Ch. 15 — Roof Assemblies", section: "Virginia" },
+  { q: "What is 'asbestos abatement'?", a: "The process of removing, encapsulating, or enclosing asbestos-containing materials — requires licensed contractors and regulatory compliance.", ch: "NASCLA Ch. 12 — Environmental Regulations", section: "Virginia" },
+  { q: "What does the EPA's RRP Rule require?", a: "Renovation, Repair, and Painting — contractors in pre-1978 homes must be EPA-certified and follow lead-safe work practices.", ch: "NASCLA Ch. 12 — Environmental Regulations", section: "Virginia" },
+  { q: "What is 'bearing capacity' of soil?", a: "The maximum load per unit area that soil can support without shearing or excessive settlement.", ch: "VUSBC Part I, Ch. 18 — Soils and Foundations", section: "Virginia" },
+  { q: "What federal law regulates stormwater discharges from construction sites?", a: "The Clean Water Act (CWA) — enforced through the NPDES permit program.", ch: "NASCLA Ch. 12 — Environmental Regulations", section: "Virginia" },
+  { q: "What is 'radon' and why is it a construction concern?", a: "A naturally occurring radioactive gas that can accumulate in buildings — high-radon areas require mitigation systems like sub-slab depressurization.", ch: "NASCLA / VUSBC appendix", section: "Virginia" },
+  { q: "What federal law governs accessibility requirements for construction?", a: "The Americans with Disabilities Act (ADA) — Titles II and III apply to most commercial buildings.", ch: "VUSBC Part I / ADA", section: "Virginia" },
+  { q: "What code standard is used for accessibility compliance under the building code?", a: "ICC A117.1 — Accessible and Usable Buildings and Facilities.", ch: "VUSBC Part I, Ch. 11 — Accessibility", section: "Virginia" }
 ];
 
-let deck = [...allCards];
-let currentIndex = 0;
-let missedCards = new Set();
-let activeFilter = 'all';
+function getWrongAnswers(correct, pool) {
+  const wrong = pool.filter(c => c.a !== correct).map(c => c.a);
+  return wrong.sort(() => Math.random() - 0.5).slice(0, 3);
+}
 
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
@@ -469,6 +469,39 @@ function shuffle(arr) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
+}
+
+let deck = [...allCards];
+let currentIndex = 0;
+let missedCards = new Set();
+let activeFilter = 'all';
+let currentMode = 'flashcard';
+let quizAnswered = false;
+let quizCorrectCount = 0;
+let quizWrongCount = 0;
+let quizWrongIndices = [];
+
+function setMode(mode, btn) {
+  currentMode = mode;
+  document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentIndex = 0;
+
+  if (mode === 'flashcard') {
+    document.getElementById('flashcardMode').style.display = 'flex';
+    document.getElementById('quizMode').style.display = 'none';
+    document.getElementById('resultsScreen').style.display = 'none';
+    document.getElementById('scoreBar').style.display = 'none';
+    showCard();
+  } else {
+    document.getElementById('flashcardMode').style.display = 'none';
+    document.getElementById('quizMode').style.display = 'flex';
+    document.getElementById('resultsScreen').style.display = 'none';
+    document.getElementById('scoreBar').style.display = 'flex';
+    quizCorrectCount = 0; quizWrongCount = 0; quizWrongIndices = [];
+    updateScoreBar();
+    showQuizCard();
+  }
 }
 
 function filterSection(section, btn) {
@@ -479,84 +512,198 @@ function filterSection(section, btn) {
   if (section === 'all') {
     deck = [...allCards];
   } else if (section === 'Missed') {
-    deck = allCards.filter((_, i) => missedCards.has(i));
-    if (deck.length === 0) {
-      alert('No missed cards yet! Mark cards with ⭐ as you study.');
-      deck = [...allCards];
-      activeFilter = 'all';
+    const missed = allCards.filter((_, i) => missedCards.has(i));
+    if (!missed.length) {
+      alert('No missed cards yet! Mark cards with the star button as you study.');
+      deck = [...allCards]; activeFilter = 'all';
       document.querySelector('.btn-filter').classList.add('active');
       btn.classList.remove('active');
-    }
+    } else { deck = missed; }
   } else {
     deck = allCards.filter(c => c.section === section);
   }
 
   currentIndex = 0;
-  showCard();
+  quizCorrectCount = 0; quizWrongCount = 0; quizWrongIndices = [];
+  updateScoreBar();
+  if (currentMode === 'flashcard') showCard(); else showQuizCard();
 }
 
+// FLASHCARD
 function showCard() {
-  if (deck.length === 0) return;
+  if (!deck.length) return;
   const c = deck[currentIndex];
   document.getElementById('card').classList.remove('flipped');
   document.getElementById('qNumber').textContent = `Q${currentIndex + 1}`;
   document.getElementById('cardQuestion').textContent = c.q;
   document.getElementById('cardChapter').textContent = c.ch;
   document.getElementById('cardAnswer').textContent = c.a;
-  const pct = ((currentIndex + 1) / deck.length) * 100;
-  document.getElementById('progressBar').style.width = pct + '%';
-  document.getElementById('counter').textContent = `Card ${currentIndex + 1} of ${deck.length}`;
+  updateProgress();
   document.getElementById('knownIndicator').textContent = '';
 }
 
-function flipCard() {
-  document.getElementById('card').classList.toggle('flipped');
-}
+function flipCard() { document.getElementById('card').classList.toggle('flipped'); }
 
 function nextCard() {
+  if (currentMode !== 'flashcard') return;
   document.getElementById('card').classList.remove('flipped');
-  setTimeout(() => {
-    currentIndex = (currentIndex + 1) % deck.length;
-    showCard();
-  }, 150);
+  setTimeout(() => { currentIndex = (currentIndex + 1) % deck.length; showCard(); }, 120);
 }
 
 function prevCard() {
+  if (currentMode !== 'flashcard') return;
   document.getElementById('card').classList.remove('flipped');
-  setTimeout(() => {
-    currentIndex = (currentIndex - 1 + deck.length) % deck.length;
-    showCard();
-  }, 150);
+  setTimeout(() => { currentIndex = (currentIndex - 1 + deck.length) % deck.length; showCard(); }, 120);
 }
 
 function shuffleDeck() {
-  shuffle(deck);
-  currentIndex = 0;
-  showCard();
+  shuffle(deck); currentIndex = 0;
+  if (currentMode === 'quiz') {
+    quizCorrectCount = 0; quizWrongCount = 0; quizWrongIndices = [];
+    updateScoreBar();
+    document.getElementById('resultsScreen').style.display = 'none';
+    document.getElementById('quizMode').style.display = 'flex';
+    showQuizCard();
+  } else { showCard(); }
 }
 
 function restartDeck() {
   currentIndex = 0;
-  document.getElementById('card').classList.remove('flipped');
-  showCard();
+  if (currentMode === 'quiz') {
+    quizCorrectCount = 0; quizWrongCount = 0; quizWrongIndices = [];
+    updateScoreBar();
+    document.getElementById('resultsScreen').style.display = 'none';
+    document.getElementById('quizMode').style.display = 'flex';
+    showQuizCard();
+  } else { document.getElementById('card').classList.remove('flipped'); showCard(); }
 }
 
 function markMissed() {
   const globalIdx = allCards.indexOf(deck[currentIndex]);
   if (missedCards.has(globalIdx)) {
     missedCards.delete(globalIdx);
-    document.getElementById('knownIndicator').textContent = '✓ Removed from missed';
+    document.getElementById('knownIndicator').textContent = 'Removed from missed';
   } else {
     missedCards.add(globalIdx);
-    document.getElementById('knownIndicator').textContent = '⭐ Added to missed cards!';
+    document.getElementById('knownIndicator').textContent = 'Added to missed!';
   }
 }
 
-// Keyboard navigation
+function updateProgress() {
+  const pct = ((currentIndex + 1) / deck.length) * 100;
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('counter').textContent = `Card ${currentIndex + 1} of ${deck.length}`;
+}
+
+// QUIZ
+function showQuizCard() {
+  if (!deck.length) return;
+  quizAnswered = false;
+  const c = deck[currentIndex];
+  document.getElementById('quizQNum').textContent = `Q${currentIndex + 1} of ${deck.length}`;
+  document.getElementById('quizChapter').textContent = c.ch;
+  document.getElementById('quizQuestion').textContent = c.q;
+  document.getElementById('quizFeedback').style.display = 'none';
+  document.getElementById('quizFeedback').className = 'quiz-feedback';
+  document.getElementById('quizNextBtn').style.display = 'none';
+  updateProgress();
+
+  const wrongPool = deck.filter((_, i) => i !== currentIndex);
+  const wrongs = getWrongAnswers(c.a, wrongPool.length >= 3 ? wrongPool : allCards);
+  const options = shuffle([c.a, ...wrongs]);
+  const letters = ['A', 'B', 'C', 'D'];
+  const container = document.getElementById('quizOptions');
+  container.innerHTML = '';
+
+  options.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'quiz-option';
+    btn.innerHTML = `<span class="option-inner"><span class="quiz-letter">${letters[i]}</span><span>${opt}</span></span>`;
+    btn.onclick = () => selectAnswer(btn, opt, c.a);
+    container.appendChild(btn);
+  });
+}
+
+function selectAnswer(btn, selected, correct) {
+  if (quizAnswered) return;
+  quizAnswered = true;
+  document.querySelectorAll('.quiz-option').forEach(b => b.classList.add('disabled'));
+  const feedback = document.getElementById('quizFeedback');
+
+  if (selected === correct) {
+    btn.classList.add('correct');
+    quizCorrectCount++;
+    feedback.className = 'quiz-feedback correct-fb';
+    feedback.textContent = 'Correct!';
+  } else {
+    btn.classList.add('wrong');
+    quizWrongCount++;
+    quizWrongIndices.push(currentIndex);
+    document.querySelectorAll('.quiz-option').forEach(b => {
+      if (b.textContent.includes(correct)) b.classList.add('revealed');
+    });
+    feedback.className = 'quiz-feedback wrong-fb';
+    feedback.innerHTML = `Incorrect. The correct answer is: <strong>${correct}</strong>`;
+  }
+
+  feedback.style.display = 'block';
+  updateScoreBar();
+  const nextBtn = document.getElementById('quizNextBtn');
+  nextBtn.textContent = currentIndex < deck.length - 1 ? 'Next Question →' : 'See Results →';
+  nextBtn.style.display = 'block';
+}
+
+function quizNext() {
+  if (currentIndex < deck.length - 1) { currentIndex++; showQuizCard(); }
+  else showResults();
+}
+
+function updateScoreBar() {
+  document.getElementById('scoreCorrect').textContent = quizCorrectCount;
+  document.getElementById('scoreWrong').textContent = quizWrongCount;
+  const total = quizCorrectCount + quizWrongCount;
+  document.getElementById('scorePct').textContent = total > 0 ? Math.round((quizCorrectCount / total) * 100) : '—';
+}
+
+function showResults() {
+  document.getElementById('quizMode').style.display = 'none';
+  document.getElementById('resultsScreen').style.display = 'block';
+  const total = deck.length;
+  const pct = Math.round((quizCorrectCount / total) * 100);
+  const passing = pct >= 70;
+  document.getElementById('resultsPct').innerHTML = `<span class="${passing ? 'pass' : 'fail'}">${pct}%</span>`;
+  document.getElementById('resultsDetail').textContent = `${quizCorrectCount} correct out of ${total} questions`;
+  document.getElementById('resultsMsg').textContent = passing
+    ? 'Passing score! Great work — keep it up!'
+    : `Keep studying — you need 70% to pass. You missed ${quizWrongCount} questions.`;
+  document.getElementById('resultsMsg').style.color = passing ? '#6fcf97' : '#e2b96f';
+}
+
+function retryWrong() {
+  if (!quizWrongIndices.length) { newQuiz(); return; }
+  deck = quizWrongIndices.map(i => deck[i]);
+  currentIndex = 0; quizCorrectCount = 0; quizWrongCount = 0; quizWrongIndices = [];
+  updateScoreBar();
+  document.getElementById('resultsScreen').style.display = 'none';
+  document.getElementById('quizMode').style.display = 'flex';
+  showQuizCard();
+}
+
+function newQuiz() {
+  currentIndex = 0; quizCorrectCount = 0; quizWrongCount = 0; quizWrongIndices = [];
+  if (activeFilter === 'all') deck = [...allCards];
+  shuffle(deck); updateScoreBar();
+  document.getElementById('resultsScreen').style.display = 'none';
+  document.getElementById('quizMode').style.display = 'flex';
+  showQuizCard();
+}
+
 document.addEventListener('keydown', e => {
-  if (e.key === 'ArrowRight') nextCard();
-  if (e.key === 'ArrowLeft') prevCard();
-  if (e.key === ' ') { e.preventDefault(); flipCard(); }
+  if (currentMode === 'flashcard') {
+    if (e.key === 'ArrowRight') nextCard();
+    if (e.key === 'ArrowLeft') prevCard();
+    if (e.key === ' ') { e.preventDefault(); flipCard(); }
+  } else if (e.key === 'ArrowRight' && quizAnswered) quizNext();
 });
 
 showCard();
