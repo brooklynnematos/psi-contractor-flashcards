@@ -458,9 +458,16 @@ const allCards = [
   { q: "What code standard is used for accessibility compliance under the building code?", a: "ICC A117.1 — Accessible and Usable Buildings and Facilities.", ch: "VUSBC Part I, Ch. 11 — Accessibility", section: "Virginia" }
 ];
 
-function getWrongAnswers(correct, pool) {
-  const wrong = pool.filter(c => c.a !== correct).map(c => c.a);
-  return wrong.sort(() => Math.random() - 0.5).slice(0, 3);
+function getWrongAnswers(correct, currentCard) {
+  // First try: same section (most plausible distractors)
+  let sameSection = allCards.filter(c => c.section === currentCard.section && c.a !== correct);
+  // Shuffle and take up to 3
+  sameSection = sameSection.sort(() => Math.random() - 0.5);
+  if (sameSection.length >= 3) return sameSection.slice(0, 3).map(c => c.a);
+  // Fallback: fill remaining slots from full deck if section is small
+  const others = allCards.filter(c => c.section !== currentCard.section && c.a !== correct)
+                         .sort(() => Math.random() - 0.5);
+  return [...sameSection, ...others].slice(0, 3).map(c => c.a);
 }
 
 function shuffle(arr) {
@@ -608,8 +615,7 @@ function showQuizCard() {
   document.getElementById('quizNextBtn').style.display = 'none';
   updateProgress();
 
-  const wrongPool = deck.filter((_, i) => i !== currentIndex);
-  const wrongs = getWrongAnswers(c.a, wrongPool.length >= 3 ? wrongPool : allCards);
+  const wrongs = getWrongAnswers(c.a, c);
   const options = shuffle([c.a, ...wrongs]);
   const letters = ['A', 'B', 'C', 'D'];
   const container = document.getElementById('quizOptions');
